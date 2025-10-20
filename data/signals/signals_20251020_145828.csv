@@ -1,0 +1,35 @@
+timestamp,symbol,action,confidence,position_size,fear_greed_index,sentiment_score,reasoning
+2025-10-20 14:58:17.366747,BTC,HOLD,0.44800000000000006,0.05,53.0,0.06,Market shows neutral (FGI: 53.0) with neutral sentiment (score: 0.06). HOLD signal generated with low confidence (0.45).
+2025-10-20 14:58:17.366747,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).
+2025-10-20 14:58:17.956891,BTC,BUY,0.535378,0.05,32.437000000000005,-0.3512599999999999,Market shows fear (FGI: 32.4) with very negative sentiment (score: -0.35). BUY signal generated with moderate confidence (0.54).
+2025-10-20 14:58:17.956891,BTC,STRONG_BUY,0.620629,0.05,18.228500000000004,-0.6354299999999999,Market shows extreme fear (FGI: 18.2) with very negative sentiment (score: -0.64). STRONG_BUY signal generated with moderate confidence (0.62).
+2025-10-20 14:58:17.997906,ETH,HOLD,0.4408,0.05,51.800000000000004,0.036,Market shows neutral (FGI: 51.8) with neutral sentiment (score: 0.04). HOLD signal generated with low confidence (0.44).
+2025-10-20 14:58:18.552430,ETH,HOLD,0.4534,0.05,53.900000000000006,0.078,Market shows neutral (FGI: 53.9) with neutral sentiment (score: 0.08). HOLD signal generated with low confidence (0.45).
+2025-10-20 14:58:19.088486,BTC,BUY,0.556219,0.05,28.963499999999996,-0.42073,Market shows fear (FGI: 29.0) with very negative sentiment (score: -0.42). BUY signal generated with moderate confidence (0.56).
+2025-10-20 14:58:19.145610,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).
+2025-10-20 14:58:19.651328,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).
+2025-10-20 14:58:19.652575,BTC,SELL,0.5221690000000001,0.05,65.3615,0.30723,Market shows greed (FGI: 65.4) with very positive sentiment (score: 0.31). SELL signal generated with moderate confidence (0.52).
+2025-10-20 14:58:20.241064,BTC,HOLD,0.44170000000000004,0.05,48.05,-0.039,Market shows neutral (FGI: 48.0) with neutral sentiment (score: -0.04). HOLD signal generated with low confidence (0.44).
+2025-10-20 14:58:20.241064,BTC,HOLD,0.43900000000000006,0.05,48.5,-0.03,Market shows neutral (FGI: 48.5) with neutral sentiment (score: -0.03). HOLD signal generated with low confidence (0.44).
+2025-10-20 14:58:20.861491,BTC,SELL,0.525283,0.05,65.8805,0.31760999999999995,Market shows greed (FGI: 65.9) with very positive sentiment (score: 0.32). SELL signal generated with moderate confidence (0.53).
+2025-10-20 14:58:20.862710,BTC,SELL,0.523399,0.05,65.56649999999999,0.31133,Market shows greed (FGI: 65.6) with very positive sentiment (score: 0.31). SELL signal generated with moderate confidence (0.52).
+2025-10-20 14:58:21.457052,BTC,SELL,0.514399,0.05,64.0665,0.28132999999999997,Market shows greed (FGI: 64.1) with positive sentiment (score: 0.28). SELL signal generated with moderate confidence (0.51).
+2025-10-20 14:58:21.457052,BTC,HOLD,0.45699999999999996,0.05,54.50000000000001,0.09,Market shows neutral (FGI: 54.5) with neutral sentiment (score: 0.09). HOLD signal generated with low confidence (0.46).
+2025-10-20 14:58:22.067334,BTC,HOLD,0.44800000000000006,0.05,53.0,0.06,Market shows neutral (FGI: 53.0) with neutral sentiment (score: 0.06). HOLD signal generated with low confidence (0.45).
+2025-10-20 14:58:22.067334,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).
+2025-10-20 14:58:22.651419,BTC,BUY,0.535378,0.05,32.437000000000005,-0.3512599999999999,Market shows fear (FGI: 32.4) with very negative sentiment (score: -0.35). BUY signal generated with moderate confidence (0.54).
+2025-10-20 14:58:22.651419,BTC,STRONG_BUY,0.620629,0.05,18.228500000000004,-0.6354299999999999,Market shows extreme fear (FGI: 18.2) with very negative sentiment (score: -0.64). STRONG_BUY signal generated with moderate confidence (0.62).
+2025-10-20 14:58:23.246369,ETH,HOLD,0.4408,0.05,51.800000000000004,0.036,Market shows neutral (FGI: 51.8) with neutral sentiment (score: 0.04). HOLD signal generated with low confidence (0.44).
+2025-10-20 14:58:23.246369,ETH,HOLD,0.4534,0.05,53.900000000000006,0.078,Market shows neutral (FGI: 53.9) with neutral sentiment (score: 0.08). HOLD signal generated with low confidence (0.45).
+2025-10-20 14:58:23.851341,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).
+2025-10-20 14:58:23.851341,BTC,BUY,0.556219,0.05,28.963499999999996,-0.42073,Market shows fear (FGI: 29.0) with very negative sentiment (score: -0.42). BUY signal generated with moderate confidence (0.56).
+2025-10-20 14:58:24.361380,BTC,SELL,0.5221690000000001,0.05,65.3615,0.30723,Market shows greed (FGI: 65.4) with very positive sentiment (score: 0.31). SELL signal generated with moderate confidence (0.52).
+2025-10-20 14:58:24.451303,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).
+2025-10-20 14:58:24.926920,BTC,HOLD,0.44170000000000004,0.05,48.05,-0.039,Market shows neutral (FGI: 48.0) with neutral sentiment (score: -0.04). HOLD signal generated with low confidence (0.44).
+2025-10-20 14:58:25.051323,BTC,HOLD,0.43900000000000006,0.05,48.5,-0.03,Market shows neutral (FGI: 48.5) with neutral sentiment (score: -0.03). HOLD signal generated with low confidence (0.44).
+2025-10-20 14:58:25.433889,BTC,SELL,0.525283,0.05,65.8805,0.31760999999999995,Market shows greed (FGI: 65.9) with very positive sentiment (score: 0.32). SELL signal generated with moderate confidence (0.53).
+2025-10-20 14:58:25.647030,BTC,SELL,0.523399,0.05,65.56649999999999,0.31133,Market shows greed (FGI: 65.6) with very positive sentiment (score: 0.31). SELL signal generated with moderate confidence (0.52).
+2025-10-20 14:58:26.026970,BTC,HOLD,0.45699999999999996,0.05,54.50000000000001,0.09,Market shows neutral (FGI: 54.5) with neutral sentiment (score: 0.09). HOLD signal generated with low confidence (0.46).
+2025-10-20 14:58:26.257622,BTC,SELL,0.514399,0.05,64.0665,0.28132999999999997,Market shows greed (FGI: 64.1) with positive sentiment (score: 0.28). SELL signal generated with moderate confidence (0.51).
+2025-10-20 14:58:26.631253,BTC,HOLD,0.44800000000000006,0.05,53.0,0.06,Market shows neutral (FGI: 53.0) with neutral sentiment (score: 0.06). HOLD signal generated with low confidence (0.45).
+2025-10-20 14:58:26.769578,BTC,HOLD,0.43000000000000005,0.05,50.0,0.0,Market shows neutral (FGI: 50.0) with neutral sentiment (score: 0.00). HOLD signal generated with low confidence (0.43).

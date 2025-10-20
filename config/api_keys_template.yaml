@@ -1,0 +1,62 @@
+# API Keys and Credentials Configuration
+# DO NOT COMMIT THIS FILE TO GIT!
+# Copy this to api_keys.yaml and fill in your credentials
+
+# Twitter API v2 (Free tier: https://developer.twitter.com/en/portal/dashboard)
+# For live streaming, you need Bearer Token (Essential access is free)
+# Apply at: https://developer.twitter.com/en/apply-for-access
+twitter:
+  # For Twitter API v2 (recommended for live streaming)
+  bearer_token: "AAAAAAAAAAAAAAAAAAAAAP%2BX4wEAAAASGEGuC2ig26jEbkmKxokUjesMnxU%3DwWknwiyl0Dsrir4fcPFTB5iujazcLZhOdAqlTWosXefWKz7Rq8"  # Required for live mode
+  
+  # Legacy API v1.1 credentials (optional, not needed for v2)
+  api_key: "vdcAQotdyiKqVFfmiOx6hORdN"
+  api_secret: "buy8l08menaD0rsMnMQGa0rnTXxMkVBTSFWGEGjTX6Atpa1x"
+  access_token: "1562534324645179393-7v5IzJmVx2ckqWNFGSGGUmIeJiS5Ku"
+  access_token_secret: "GkVf4N2xtKrHtIk6w6zoXtcf24DBHcZkkeYR4bJD6uAXS"
+
+# Reddit API (Free)
+reddit:
+  client_id: "d6HHRp_AWbl5_GHGNNWJl-g"
+  client_secret: "5SrP-O9YAf9mwNRyp86Mc3DFXMOxQAA"
+  user_agent: "sentiment_engine/1.0"
+  username: "YOUR_USERNAME"  # Optional
+  password: "YOUR_PASSWORD"  # Optional
+
+# News APIs
+news:
+  newsapi:
+    api_key: "d290a4331811476dFGHd8507b83d63ff6"  # Free tier: 100 requests/day
+    enabled: true
+  
+  cryptopanic:
+    api_key: "YOUR_CRYPTOPANIC_KEY"  # Free tier available
+    enabled: true
+
+# Financial Data APIs (All have free tiers)
+financial:
+  # No API key needed for free tier
+  binance:
+    enabled: true
+  
+  coingecko:
+    api_key: ""  # Optional, free tier works without
+    enabled: true
+  
+  yahoo_finance:
+    enabled: true
+
+# Database (Optional)
+database:
+  redis:
+    host: "localhost"
+    port: 6379
+    db: 0
+    password: ""  # Leave empty if no password
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "logs/sentiment_engine.log"
+  max_size_mb: 100
+  backup_count: 5

@@ -1,0 +1,2 @@
+timestamp,symbol,action,confidence,position_size,fear_greed_index,sentiment_score,reasoning
+2025-10-20 14:16:34.165290,BTC-USD,BUY,0.7000000000000001,0.056000000000000015,25.0,-0.5,Market shows fear (FGI: 25.0) with very negative sentiment (score: -0.50). BUY signal generated with high confidence (0.70).

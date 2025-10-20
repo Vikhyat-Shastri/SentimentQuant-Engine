@@ -1,0 +1,22 @@
+{
+  "sentiment_price_correlation": 0.0,
+  "correlation_significance": "none",
+  "correlation_direction": "neutral",
+  "total_signals": 0,
+  "correct_signals": 0,
+  "signal_accuracy": 0.0,
+  "win_rate": 0.0,
+  "loss_rate": 1.0,
+  "profit_factor": 0.0,
+  "sharpe_ratio": -11.19035506284583,
+  "max_drawdown": -0.9999981266175743,
+  "max_drawdown_duration_days": 1002,
+  "total_return": -0.9999981266175743,
+  "annualized_return": -0.9917631460178225,
+  "volatility": 0.2919854507269913,
+  "value_at_risk_95": 0.02914303201648083,
+  "conditional_var_95": 0.06425292676412918,
+  "timestamp": "2025-10-20T16:07:43.047412",
+  "analysis_period_days": 1003,
+  "num_trades": 30
+}

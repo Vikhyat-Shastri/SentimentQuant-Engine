@@ -1,0 +1,124 @@
+# ============================================================================
+# Multimodal Sentiment Analysis Trading System - Dependencies
+# ============================================================================
+# Install all: pip install -r requirements.txt
+# For VADER-only (no ML): Comment out the "Machine Learning" section below
+# ============================================================================
+
+# Build Tools
+setuptools>=69.0.0
+wheel>=0.42.0
+
+# ============================================================================
+# CORE DEPENDENCIES (Required)
+# ============================================================================
+
+# Core Data Processing
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.11.0
+
+# Sentiment Analysis - VADER (lightweight, fast)
+vaderSentiment>=3.3.2
+emoji>=2.8.0
+
+# Async & Threading
+aiohttp>=3.9.0
+redis>=5.0.0
+
+# Social Media APIs
+praw>=7.7.1                 # Reddit API
+tweepy>=4.14.0              # Twitter API (optional)
+snscrape>=0.7.0             # Twitter scraping (no API key needed)
+
+# News APIs
+newsapi-python>=0.2.7       # NewsAPI
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+
+# Financial Data
+ccxt>=4.1.0                 # Crypto exchange APIs
+yfinance>=0.2.32            # Yahoo Finance
+ta>=0.11.0                  # Technical analysis
+
+# Data Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.18.0
+
+# Configuration & Utils
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+loguru>=0.7.2
+
+# ============================================================================
+# MACHINE LEARNING DEPENDENCIES (Optional - ~2GB download)
+# ============================================================================
+# Comment out this section if you only want VADER-based sentiment analysis
+# ML models provide higher accuracy (91.8%) but are slower and larger
+# ============================================================================
+
+# Core ML Frameworks
+torch>=2.1.0                # PyTorch (~2GB) - Required for transformers
+transformers>=4.35.0        # HuggingFace Transformers (~500MB)
+sentencepiece>=0.1.99       # Tokenizer for some models
+accelerate>=0.20.0          # Faster inference (optional but recommended)
+
+# Multi-language Support
+langdetect>=1.0.9           # Language detection
+googletrans==3.1.0a0        # Translation (use alpha version for stability)
+
+# Alternative Data Sources
+pytrends>=4.9.0             # Google Trends (unofficial API)
+
+# ML Training & Evaluation
+scikit-learn>=1.3.0
+hmmlearn>=0.3.0             # Hidden Markov Models (optional, for regime detection)
+textblob>=0.17.1            # Additional sentiment analysis
+# spacy>=3.7.0              # Optional: Advanced NER (uncomment if needed)
+
+# ============================================================================
+# WEB FRAMEWORK (Optional - for dashboard/API)
+# ============================================================================
+# Uncomment if you want to build a web dashboard
+# fastapi>=0.104.0
+# uvicorn>=0.24.0
+
+# ============================================================================
+# TESTING & CODE QUALITY (Development only)
+# ============================================================================
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Code Quality (optional)
+# black>=23.11.0
+# flake8>=6.1.0
+# mypy>=1.7.0
+
+# ============================================================================
+# INSTALLATION NOTES
+# ============================================================================
+# 
+# Quick Install (All features):
+#   pip install -r requirements.txt
+# 
+# Minimal Install (VADER only, no ML):
+#   1. Comment out the "MACHINE LEARNING DEPENDENCIES" section above
+#   2. pip install -r requirements.txt
+# 
+# System Requirements:
+#   - Python 3.11+
+#   - ~8GB RAM (with ML models loaded)
+#   - ~3GB disk space (for ML model cache)
+#   - Internet connection for initial model download
+#
+# Troubleshooting:
+#   - If torch installation fails, install separately: pip install torch
+#   - For Windows: Some packages may need Visual C++ Build Tools
+#   - For Mac M1/M2: torch may need special installation
+#
+# ============================================================================

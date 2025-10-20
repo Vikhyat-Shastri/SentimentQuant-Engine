@@ -1,0 +1,41 @@
+
+======================================================================
+PERFORMANCE BENCHMARK REPORT
+======================================================================
+Timestamp: 2025-10-20T17:06:40.446062
+Duration: 32s
+Items Processed: 121
+
+LATENCY METRICS (milliseconds)
+----------------------------------------------------------------------
+Metric                                Avg        P50        P95        P99        Max
+----------------------------------------------------------------------
+Sentiment Analysis                   1.69       1.22       5.52       9.03      16.44
+Signal Generation                    0.01       0.01       0.02       0.03       0.03
+End-to-End                           0.00       0.00       0.00       0.00       0.00
+
+THROUGHPUT METRICS
+----------------------------------------------------------------------
+Items/second:        3.75
+Items/minute:         225
+
+RESOURCE USAGE
+----------------------------------------------------------------------
+Memory (avg):      119.95 MB
+Memory (peak):     120.37 MB
+CPU (avg):           1.66%
+CPU (peak):         16.60%
+
+TARGET COMPLIANCE
+----------------------------------------------------------------------
+Sentiment latency target (<100ms p95): [PASS]
+Signal latency target (<500ms p95): [PASS]
+Throughput target (>10,000/min): [FAIL]
+
+ACTUAL vs TARGET
+----------------------------------------------------------------------
+Sentiment P95: 5.52ms (target: 100ms)
+Signal P95:    0.02ms (target: 500ms)
+Throughput:    225/min (target: 10,000/min)
+======================================================================
+

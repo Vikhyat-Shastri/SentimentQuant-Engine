@@ -1,0 +1,2 @@
+timestamp,symbol,action,confidence,position_size,fear_greed_index,sentiment_score,reasoning
+2025-10-20 17:15:51.253880,BTC-USD,STRONG_BUY,0.9299999999999999,0.02,85.0,0.9,Market shows extreme greed (FGI: 85.0) with very positive sentiment (score: 0.90). STRONG_BUY signal generated with high confidence (0.93).

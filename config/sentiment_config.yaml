@@ -1,0 +1,89 @@
+# Configuration for Sentiment Analysis
+# Thresholds and parameters for sentiment scoring
+
+sentiment:
+  # Model configuration
+  models:
+    finbert:
+      enabled: true
+      model_name: "ProsusAI/finbert"
+      batch_size: 16
+      max_length: 512
+    vader:
+      enabled: true
+      weight: 0.3  # Weight in ensemble
+    custom:
+      enabled: true
+      weight: 0.2
+
+  # Sentiment thresholds
+  thresholds:
+    extreme_fear: 25
+    fear: 45
+    neutral_low: 45
+    neutral_high: 55
+    greed: 75
+    extreme_greed: 75
+
+  # Aggregation settings
+  aggregation:
+    time_decay_halflife_hours: 4
+    min_samples_per_aggregation: 5
+    
+  # Source weights (credibility multipliers)
+  source_weights:
+    news_verified: 1.5
+    twitter_verified: 1.2
+    twitter_regular: 1.0
+    reddit_high_karma: 1.1
+    reddit_regular: 1.0
+  
+  # Influence weights (user impact)
+  influence:
+    follower_weight_log_base: 10  # log10 scaling
+    karma_weight_log_base: 10
+    min_followers_for_weight: 100
+    max_weight_multiplier: 3.0
+
+  # Keywords for fear/greed detection
+  fear_keywords:
+    - "crash"
+    - "dump"
+    - "panic"
+    - "sell"
+    - "fear"
+    - "blood"
+    - "bottom"
+    - "bear"
+    - "collapse"
+  
+  greed_keywords:
+    - "moon"
+    - "pump"
+    - "fomo"
+    - "bullish"
+    - "buy"
+    - "greed"
+    - "ath"
+    - "100x"
+    - "lambo"
+    - "bull"
+
+# Time windows for analysis
+timeframes:
+  realtime: 60  # seconds
+  short: 300    # 5 minutes
+  medium: 900   # 15 minutes
+  hourly: 3600
+  four_hour: 14400
+  daily: 86400
+
+# Processing settings
+processing:
+  max_text_length: 500
+  min_text_length: 10
+  remove_urls: true
+  remove_mentions: true
+  remove_hashtags: false  # Keep for sentiment
+  lowercase: true
+  remove_stopwords: true

@@ -1,0 +1,115 @@
+# Configuration for Trading Signal Generation
+# Parameters for fear/greed index and signal logic
+
+signals:
+  # Fear & Greed Index components and weights
+  fear_greed_index:
+    components:
+      sentiment_score:
+        weight: 0.25
+        normalize: true
+      volume_momentum:
+        weight: 0.25
+        lookback_periods: 14
+      volatility:
+        weight: 0.15
+        lookback_periods: 30
+      social_volume:
+        weight: 0.15
+        baseline_hours: 24
+      dominance:
+        weight: 0.10
+        asset: "BTC"
+      trends:
+        weight: 0.10
+        enabled: false  # Requires Google Trends API
+  
+  # Signal generation thresholds
+  thresholds:
+    buy:
+      fear_greed_max: 30  # Extreme fear
+      sentiment_divergence_min: 0.3  # Price holds, sentiment negative
+      volume_spike_min: 2.0  # 2x average volume
+      confidence_min: 0.6
+    
+    sell:
+      fear_greed_min: 75  # Extreme greed
+      sentiment_divergence_min: 0.3  # Price weak, sentiment positive
+      momentum_decline_threshold: -0.2
+      confidence_min: 0.6
+    
+    hold:
+      fear_greed_min: 30
+      fear_greed_max: 75
+
+  # Signal confirmation requirements
+  confirmation:
+    min_factors: 2  # Require at least 2 factors aligned
+    max_signal_age_seconds: 300  # Signal valid for 5 minutes
+    
+  # Signal attributes
+  strength_levels:
+    weak: [0, 0.4]
+    moderate: [0.4, 0.7]
+    strong: [0.7, 0.85]
+    very_strong: [0.85, 1.0]
+  
+  duration_mapping:
+    SHORT: [3600, 14400]      # 1-4 hours
+    MEDIUM: [14400, 86400]    # 4-24 hours
+    LONG: [86400, 604800]     # 1-7 days
+
+# Risk management parameters
+risk_management:
+  position_sizing:
+    max_position_pct: 0.10  # 10% max per asset
+    kelly_fraction: 0.25    # Quarter Kelly for safety
+    min_confidence_for_trade: 0.6
+  
+  stop_loss:
+    atr_multiplier: 2.0     # 2x Average True Range
+    max_loss_pct: 0.05      # 5% max loss per trade
+    trailing_stop: true
+    trailing_pct: 0.03      # 3% trailing
+  
+  take_profit:
+    risk_reward_ratio: 2.0  # 2:1 reward to risk
+    partial_take_profit: true
+    partial_pct: 0.5        # Take 50% at 1:1, rest at 2:1
+  
+  portfolio:
+    max_drawdown_pct: 0.15  # 15% max drawdown
+    max_correlated_positions: 0.30  # Max 30% correlation
+    max_concurrent_positions: 5
+    min_capital_reserve: 0.20  # Keep 20% in reserve
+
+# Correlation parameters
+correlation:
+  lookback_periods: 
+    short: 60      # 1 hour (in minutes)
+    medium: 240    # 4 hours
+    long: 1440     # 24 hours
+  
+  min_correlation: 0.3  # Minimum correlation to consider
+  update_frequency: 60  # Update every minute
+  
+  lead_lag:
+    max_lag_minutes: 30
+    test_lags: [1, 5, 10, 15, 30]
+
+# Performance tracking
+performance:
+  metrics:
+    - "total_return"
+    - "sharpe_ratio"
+    - "sortino_ratio"
+    - "max_drawdown"
+    - "win_rate"
+    - "profit_factor"
+    - "alpha"
+  
+  targets:
+    sharpe_ratio_min: 1.5
+    win_rate_min: 0.55
+    max_drawdown_max: 0.20
+    alpha_min: 0.10  # 10% annualized
