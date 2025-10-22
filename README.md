@@ -1,5 +1,3 @@
-
-
 # SentimentQuant-Engine: Multimodal Sentiment Analysis Trading System
 
 > The next-generation engine for financial sentiment, analytics, and algorithmic trading.
@@ -245,3 +243,41 @@ See documentation in `docs/` or contact project maintainers for questions.
 
 **Project Status:** ✅ Complete and ready for submission  
 **Last Updated:** October 2025
+
+---
+
+## Minimal setup for reproducibility
+
+Goal: make it easy for another user to run the project with minimal effort (install deps, add API keys, download HF weights).
+
+Steps a user must do after cloning:
+
+1. Install dependencies:
+
+```powershell
+cd SentimentQuant-Engine
+pip install -r requirements.txt
+```
+
+2. Add API keys:
+
+```powershell
+copy config\api_keys_template.yaml config\api_keys.yaml
+# Edit config\api_keys.yaml and add your API keys
+```
+
+3. Download model weights (example using the included helper):
+
+```powershell
+python scripts\download_weights.py --url "https://huggingface.co/ProsusAI/finbert/resolve/4556d13015211d73dccd3fdd39d39232506f3e43/pytorch_model.bin" --out models/cache/models--ProsusAI--finbert/snapshots/4556d13015211d73dccd3fdd39d39232506f3e43
+
+python scripts\download_weights.py --url "https://huggingface.co/ProsusAI/finbert/resolve/7db323f79b751944bcfa66298ec06977e4518306/model.safetensors" --out models/cache/models--ProsusAI--finbert/snapshots/7db323f79b751944bcfa66298ec06977e4518306
+```
+
+Replace the URL and `<snapshot-id>` with the correct HF release path or snapshot folder name. The code in `src/ml` uses `AutoTokenizer.from_pretrained(...)` and `AutoModelForSequenceClassification.from_pretrained(...)`, so Hugging Face cache layout is acceptable.
+
+4. Run a quick demo (simulation mode):
+
+```powershell
+python scripts\main.py --mode simulation --duration 60
+```
