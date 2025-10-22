@@ -4,7 +4,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://img.shields.io/badge/tests-26%2F26%20passing-brightgreen.svg)](docs/TECHNICAL_REPORT.md)
-[![Code](https://img.shields.io/badge/code-15000+%2B%20lines-blue.svg)](README.md)
+[![Code](https://img.shields.io/badge/code-15000+-%2B%20lines-blue.svg)](README.md)
 [![ML Models](https://img.shields.io/badge/ML-FinBERT%20%7C%20DistilBERT%20%7C%20RoBERTa-orange.svg)](docs/TECHNICAL_REPORT.md)
 [![Production Ready](https://img.shields.io/badge/status-production%20ready-success.svg)](README.md)
 
